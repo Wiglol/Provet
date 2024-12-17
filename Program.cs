@@ -1,36 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prov_U._1
+namespace Prov_U._2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Please enter a number: ");
-            int number = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Please enter a double: "); 
-            double number2 = Convert.ToDouble(Console.ReadLine());  
-            Console.Write("Please enter a float: "); 
-            float number3 = Convert.ToSingle(Console.ReadLine());
-            Console.Write("Please enter a word: "); 
-            String word = Console.ReadLine();
+            Console.Write("Please enter a number: "); 
+            int Num = Convert.ToInt32(Console.ReadLine());
+
+            if (Num > 0)
+            {
+                Console.WriteLine("Number is positive");
+            }
+            else if (Num == 0)
+            {
+              Console.WriteLine("The number is zero");
+    
+            }
+            else if( Num < 0)
+            {
+                Console.WriteLine("The number is negative"); 
+            }
+            else
+            {
+                Console.WriteLine("Invalid Input"); 
+            }
             
-            Console.WriteLine(word);
-            Console.WriteLine(number);
-            Console.WriteLine(number2);
-            Console.WriteLine(number3);
+            
+            
+            
+                
+            
 
-            Console.WriteLine("An int stores whole numbers so numbers without decimals");
-            Console.WriteLine("A float is a number with less dicimals than a double");
-            Console.WriteLine("A double is a number with decimals it can hold alot of them");
-            Console.WriteLine("A string is a word that can hold characters");
 
-            Console.ReadLine(); 
 
+
+            Console.ReadLine();
         }
     }
 }
